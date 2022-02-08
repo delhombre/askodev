@@ -1,0 +1,12 @@
+.card,
+%card {
+	background: var(--card-bg, var(--background-light));
+	box-shadow: 12px 12px 24px var(--shadow);
+	transition: 0.3s;
+	position: relative;
+}
+
+.card__image {
+	position: relative;
+	overflow: hidden;
+}

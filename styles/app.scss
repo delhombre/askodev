@@ -1,0 +1,57 @@
+// Variables
+// =========================================================================
+:root {
+	--color: #303030;
+	--contrast: #f092cb;
+	--secondary: #6155a6;
+	--color-black: #000000;
+	--gap: 20px;
+	--space: 8px;
+	--border: #d5e3ec;
+	--background: #f8f8f8;
+	--background-light: #f1f1f1;
+	--shadow: #9f9f9f54;
+}
+
+// Tools
+// =========================================================================
+@import "./tools/reset";
+@import "./tools/functions";
+@import "./tools/mixins";
+@import "./tools/layout";
+@import "./tools/typography";
+@import "./tools/animations";
+
+// General
+// =========================================================================
+body {
+	font-family: $font;
+	font-size: 25px;
+	color: var(--color);
+	line-height: 1.6;
+	scroll-margin: 100px 0 0 0;
+	word-break: break-word;
+}
+
+@include down(900) {
+	body {
+		font-size: 16px;
+	}
+}
+
+// Modules
+// =========================================================================
+@import "./modules/header";
+@import "./modules/footer";
+@import "./modules/btn";
+@import "./modules/card";
+@import "./modules/form";
+@import "./modules/tabs";
+
+// Pages
+// =========================================================================
+@import "./pages/home";
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/whatwedo";

@@ -1,0 +1,50 @@
+.contact {
+	@extend %main;
+
+	h1 {
+		font-size: 50px;
+		font-weight: 600;
+		line-height: 62.8px;
+	}
+
+	p {
+		font-size: 27px;
+		line-height: 33.91px;
+		max-width: 559px;
+	}
+
+	.grid2 {
+		margin-top: space(5);
+		gap: space(10);
+
+		.image-container {
+			transform: translate3d(space(12), space(-15), 0);
+		}
+	}
+
+	form {
+		& > * + * {
+			margin-top: space(8);
+		}
+	}
+}
+
+@include down(800) {
+	.contact {
+		h1 {
+			font-size: 35px;
+			line-height: 1.2;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 33.91px;
+		}
+
+		form {
+			& > * + * {
+				margin-top: space(4);
+			}
+		}
+	}
+}

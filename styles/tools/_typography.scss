@@ -1,0 +1,153 @@
+// Variables
+// ==========================================================================
+$font: "Be Vietnam", sans-serif;
+$font-alt: "Be Vietnam", sans-serif;
+$font-header-home: "Space Grotesk", sans-serif;
+
+// Font face
+// ==========================================================================
+@include font-face(
+	"Be Vietnam",
+	"/fonts/Be Vietnam/BeVietnam",
+	300 400 500 600 700 800 900,
+	null,
+	ttf
+);
+
+// @include font-face(
+// 	"Space Grotesk",
+// 	"/fonts/Space Grotesk/SpaceGrotesk",
+// 	400,
+// 	null,
+// 	ttf
+// );
+
+%h1,
+.h1 {
+	font-family: $font-alt;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 32px;
+	line-height: 1.2;
+
+	@include up(600) {
+		font-size: 42px;
+	}
+}
+
+%h2,
+.h2 {
+	font-weight: 700;
+	font-style: normal;
+	font-size: 32px;
+	line-height: 1.2;
+}
+
+%underlined {
+	border-bottom: 1px solid var(--border);
+	padding-bottom: space(1);
+	margin-bottom: space(3);
+}
+
+%h3,
+.h3 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.3;
+
+	strong {
+		font-weight: bold;
+	}
+
+	.icon {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+%h4,
+.h4 {
+	font-family: $font-alt;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+%h5,
+.h5 {
+	font-family: $font-alt;
+	font-weight: bold;
+}
+
+small,
+.text-small {
+	font-size: 0.9em;
+}
+
+// Alignment
+// ==========================================================================
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.is-normal {
+	font-weight: normal;
+}
+
+.is-bold {
+	font-weight: bold;
+}
+
+.is-uppercase {
+	text-transform: uppercase;
+}
+
+.is-underline {
+	text-decoration: underline;
+}
+
+a.is-underline:hover {
+	text-decoration: none;
+}
+
+.reader-only {
+	display: none;
+}
+
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text-big {
+	font-size: 1.1em;
+}
+
+.ignore-br br {
+	display: none;
+}
+
+.link {
+	transition: color 0.3s;
+}
+
+.link:hover {
+	color: var(--contrast);
+	text-decoration: underline;
+}
+
+.text-primary {
+	color: var(--contrast);
+}
+
+.text-secondary {
+	color: var(--secondary);
+}

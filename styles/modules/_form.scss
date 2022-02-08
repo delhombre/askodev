@@ -1,0 +1,87 @@
+// Label
+// ==========================================================================
+label {
+	text-transform: capitalize;
+	font-weight: 300;
+	font-size: 0.85em;
+}
+
+input:disabled {
+	opacity: 0.7;
+}
+
+// Form group
+// ==========================================================================
+.form-group {
+	position: relative;
+	display: flex;
+}
+
+// Text Fields
+// ==========================================================================
+.form-group input,
+.form-group textarea,
+.form-group select,
+%input {
+	border: none;
+	border-bottom: 1px solid var(--color);
+	color: var(--color);
+	padding: space(1.5) 0;
+	display: block;
+	width: 100%;
+	outline: none;
+	min-height: 48px;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.form-group label {
+	font-size: 20px;
+	color: #30303094;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	transition: 0.3s;
+	margin-bottom: space(1);
+}
+
+// Validation
+// ==========================================================================
+.form-error {
+	color: #fb4635;
+	font-size: 0.8em;
+	margin-top: 0.5em;
+	line-height: 1.2;
+
+	* > * {
+		margin-top: 0.5em;
+	}
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+	border-color: #fb4635;
+}
+
+.invalid-feedback {
+	color: #fb4635;
+	margin-top: space(1);
+	font-size: 0.9em;
+}
+
+// Accessibility
+// ==========================================================================
+.form-group:focus-within label,
+.form-group.has-value label {
+	color: var(--color);
+	font-size: 20px;
+	font-weight: 600;
+	top: 0;
+	transform: translateY(-100%) scale(1.1);
+}
+
+.form-group:focus-within input,
+.form-group.has-value input {
+	border-bottom: 1px solid var(--color);
+}
